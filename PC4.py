@@ -26,8 +26,8 @@
 # Pero se ejecuta en la terminal de tu computadora, no en Jupyter Notebook.
 # OJO: Debes antes tener instalado Streamlit en tu computadora, debes antes definir la ruta de tus archivos y 
 ##     tener un script de Python (your_script.py) que quieras ejecutar en Streamlit.
-# streamlit run your_script.py
-#  your_script.py
+# python -m streamlit run PC4.py
+#  PC4.py
 
 # Este código sirve para hacer un primer programa en Streamlit.
 import streamlit as st
@@ -45,7 +45,7 @@ pagina_seleccionada = st.sidebar.selectbox('Selecciona la sección que deseas ve
 if pagina_seleccionada == 'Inicio':
 
     # La función st.markdown permite centrar y agrandar la letra del título de la web en Streamlit.
-    st.markdown("<h1 style='text-align: center;'>Blog PC4</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Intentando codificar</h1>", unsafe_allow_html=True)
 
     # <h1 style='text-align: center;'>Nombre de tu blog</h1>: Esto es una cadena de código HTML. 
     # La etiqueta <h1> se utiliza para el encabezado principal de una página web, y 
@@ -64,12 +64,20 @@ if pagina_seleccionada == 'Inicio':
     # Creamos dos columnas separadas para la imagen y el texto
     col1, col2 = st.columns(2)
 
+    col3, col4 = st.columns(2)
+
+    col5 = st.columns(1)
+
+    # COLUMNAS PARA LAS FOTOS
+    col6, col7, col8 = st.columns(3)
+    col9, col10, col11 = st.columns(3)
+
     # col1, col2 = st.columns(2): Esta línea está creando dos columnas en la interfaz de usuario de la aplicación web. 
     # La función st.columns toma un número entero como argumento que especifica el número de columnas que se deben crear. 
     # Las columnas creadas se asignan a las variables col1 y col2.
 
     # En la primera columna colocamos la imagen de perfil
-    col1.image("tlou.jpg", caption='Ellie mirando', width=300)
+    col2.image("perfil.jpg", caption='Maria Pia Enriquez Jimenez (soy yo!)', width=350)
 
     # col1.image("ellie.png", caption='Ellie', width=300): Esta línea está colocando una imagen en la primera columna (col1). 
     # La función image toma como primer argumento el nombre del archivo de la imagen que se desea mostrar. 
@@ -83,20 +91,40 @@ if pagina_seleccionada == 'Inicio':
     # ¿Qué te gustaría hacer en el futuro?, ¿Qué te gusta hacer en tu tiempo libre?
 
     texto = """
-    Aquí escribe una presentación creativa sobre ti.
-    ¿Quién eres?, 
-    ¿De dónde eres?, 
-    ¿Qué estudias?, 
-    ¿Qué te gusta de tu carrera?, 
-    ¿Qué te gustaría hacer en el futuro?, 
-    ¿Qué te gusta hacer en tu tiempo libre?
-    Puedes agregar un carrusel de imágenes o fotos relacionadas con tus intereses o pasatiempos.
+    Hola! Mi nombre es Maria Pia Enriquez Jimenez. Soy de Lima, Perú, estudio Comunicaciones Audiovisuales en la Pontificia Universidad Católica del Perú y siempre me ha interesado el cómo las nuevas tecnologías transforman la forma en cómo contamos historias en forma de productos audiovisuales. Escogí mi carrera justamente por eso, quiero ser parte de ese proceso creativo que crea productos que impresionen y conecten con la gente.
     """
 
     # Las comillas triples (""") en Python se utilizan para definir cadenas multilínea.
     
     # Mostramos el texto
-    col2.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto}</div>", unsafe_allow_html=True)
+    col1.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto}</div>", unsafe_allow_html=True)
+
+    texto = """
+    Lo que me gusta de mi carrera es que me permite explorar distintos lenguajes que conforman lo que conocemos como comunicación: lo audiovisual, escrito, digital, etc. También que siempre me reta a aprender cosas nuevas, como en este curso que es donde logré aprender un poco de programación.
+    """
+    col3.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto}</div>", unsafe_allow_html=True)
+
+    texto = """
+    En un futuro me gustaría aplicar todos los conocimientos que he ido adquiriendo para desarrollarme como profesional, buscar un trabajo que me haga feliz y con el que pueda llegar a una gran cantidad de personas a las que pueda impactar de buena manera.    
+    """
+    
+    col4.markdown(f"<div style='text-align: justify; font-size: 18px; '>{texto}</div>", unsafe_allow_html=True)
+    
+    texto = """
+    Algunos de mis pasatiempos:
+    """
+    
+    st.markdown(f"<h4 style='text-align: center;'>{texto}</h4>", unsafe_allow_html=True) #con esto he podido hacer un subtitulo, PUEDO HACER MÁS SUBTITULOS CON ESTO AAA
+
+    # ACÁ VOY A PONER LAS IMÁGENES DE LOS PASATIEMPOS - hacer más columnas
+
+    col6.image(" .jpg", caption=' ', width=100)
+    col7.image(" .jpg", caption=' ', width=100)
+    col8.image(" .jpg", caption=' ', width=100)
+    col9.image(" .jpg", caption=' ', width=100)
+    col10.image(" .jpg", caption=' ', width=100)
+    col11.image(" .jpg", caption=' ', width=100)
+
 
     # <div style='text-align: justify; font-size: 15px;'>{texto}</div>: Esta es una cadena de código HTML. 
     # La etiqueta <div> se utiliza para agrupar contenido en HTML. 
@@ -183,7 +211,7 @@ else:
     st.markdown("<h1 style='text-align: center;'>Mis primeros gráficos</h1>", unsafe_allow_html=True)
 
     # Creamos una lista de gráficos
-    graficos = ['Gráfico de barras verticales de lenguas aisladas', 'Gráfico de barras de familias lingüísticas', 'Gráfico de barras horizontales de familias lingüísticas', 'mapa cusco']
+    graficos = ['Gráfico de barras Tarjetas Rojas en La Liga', 'Gráfico de Resultados de Celta como visitante', 'Gráfico de Resultados de Celta como local', 'WordCloud Paro', 'Mapa Películas']
 
     # Creamos un cuadro de selección en la página de gráficos
     grafico_seleccionado = st.selectbox('Selecciona un gráfico', graficos)
@@ -197,23 +225,27 @@ else:
     
 
     # Mostramos el gráfico seleccionado
-    if grafico_seleccionado == 'Gráfico de barras verticales de lenguas aisladas':
+    if grafico_seleccionado == 'Gráfico de barras Tarjetas Rojas en La Liga':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
         st.image("LaLiga_promedio_tarjetas_rojas_equipo_local.png", caption='Promedio de tarjetas rojas en La Liga', width=500)
         pass
-    elif grafico_seleccionado == 'Gráfico de barras de familias lingüísticas':
+    elif grafico_seleccionado == 'Gráfico de Resultados de Celta como visitante':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-        st.image("lengua_familia_GB.png", caption='Gráfico de familias lingüísticas', width=500)
+        st.image("pastel_celta_visitante.png", caption='Resultados partidos Celta como visitante', width=500)
         pass
-    elif grafico_seleccionado == 'Gráfico de barras horizontales de familias lingüísticas':
+    elif grafico_seleccionado == 'Gráfico de Resultados de Celta como local':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-        st.image("lengua_familia_GB.png", caption='Gráfico de familias lingüísticas', width=500)
+        st.image("pastel_celta_local.png", caption='Resultados partidos Celta como local', width=500)
         pass
-    elif grafico_seleccionado == 'mapa cusco':
+    elif grafico_seleccionado == 'WordCloud Paro':
+        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+        st.image("wordcloud_paro.png", caption='WordCloud sobre el texto del Paro', width=500)
+        pass
+    elif grafico_seleccionado == 'Mapa Películas':
         st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu mapa</div>", unsafe_allow_html=True)
         # Si "mapa_cusco.html" es un archivo HTML (no una imagen), debes mostrarlo con st.components.v1.html
         import streamlit.components.v1 as components
-        with open("mapa_cusco.html", "r", encoding="utf-8") as f:
+        with open("mapa_pelis.html", "r", encoding="utf-8") as f:
             html_content = f.read()
         components.html(html_content, height=500)
         pass
