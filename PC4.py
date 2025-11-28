@@ -45,7 +45,7 @@ pagina_seleccionada = st.sidebar.selectbox('Selecciona la sección que deseas ve
 if pagina_seleccionada == 'Inicio':
 
     # La función st.markdown permite centrar y agrandar la letra del título de la web en Streamlit.
-    st.markdown("<h1 style='text-align: center;'>Intentando codificar</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>๋࣭⭑✮💻 Intentando codificar 💻 ๋࣭ ⭑✮</h1>", unsafe_allow_html=True)
 
     # <h1 style='text-align: center;'>Nombre de tu blog</h1>: Esto es una cadena de código HTML. 
     # La etiqueta <h1> se utiliza para el encabezado principal de una página web, y 
@@ -91,7 +91,7 @@ if pagina_seleccionada == 'Inicio':
     # ¿Qué te gustaría hacer en el futuro?, ¿Qué te gusta hacer en tu tiempo libre?
 
     texto = """
-    Hola! Mi nombre es Maria Pia Enriquez Jimenez. Soy de Lima, Perú, estudio Comunicaciones Audiovisuales en la Pontificia Universidad Católica del Perú y siempre me ha interesado el cómo las nuevas tecnologías transforman la forma en cómo contamos historias en forma de productos audiovisuales. Escogí mi carrera justamente por eso, quiero ser parte de ese proceso creativo que crea productos que impresionen y conecten con la gente.
+    ¡Hola! Mi nombre es Maria Pia Enriquez Jimenez ᓚ₍ ^. .^₎. Soy de Lima, Perú 🦙, estudio Comunicaciones Audiovisuales 🎥 en la Pontificia Universidad Católica del Perú y siempre me ha interesado el cómo las nuevas tecnologías transforman la forma en cómo contamos historias en forma de productos audiovisuales ˙✧˖°📷 ༘ ⋆｡˚. Escogí mi carrera justamente por eso, quiero ser parte de ese proceso creativo que crea productos que impresionen y conecten con la gente 𐀪𐀪. 
     """
 
     # Las comillas triples (""") en Python se utilizan para definir cadenas multilínea.
@@ -278,4 +278,5 @@ else:
 
         # Mostrar el mapa en Streamlit
         #st_folium(mapa_cusco, width=700, height=500)
+
     
