@@ -109,7 +109,7 @@ if pagina_seleccionada == 'Sobre mí':
     
     col5.markdown(f"<div style='text-align: justify; font-size: 19px; '>{texto_3}</div>", unsafe_allow_html=True)
     
-    col6.image("harrypotter.jpg", width=350)
+    col6.image("harrypotter.JPG", width=350)
 
     texto = """
     Algunos de mis pasatiempos son:
