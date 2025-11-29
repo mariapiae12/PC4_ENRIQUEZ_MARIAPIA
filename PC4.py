@@ -36,7 +36,7 @@ import streamlit as st
 # Generamos una página principal, otra donde contaran su experiencia aprendiendo a programar y una tercera donde presentarán sus gráficos.
 
 # Creamos la lista de páginas
-paginas = ['Sobre mí', 'Experiencia', 'Gráficos', 'Final']
+paginas = ['Sobre mí', 'Experiencia', 'Gráficos']
 
 # Creamos botones de navegación tomando la lista de páginas
 pagina_seleccionada = st.sidebar.selectbox('Selecciona la sección que deseas ver', paginas)
@@ -97,7 +97,7 @@ if pagina_seleccionada == 'Sobre mí':
     col1.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_1}</div>", unsafe_allow_html=True)
 
     texto_2 = """
-    Lo que me gusta de mi carrera es que me permiye explorar distintos kenguajes que conforman lo que conocemos de la comunicación₍^. .^₎Ⳋ: lo audiovisual, escrito, digital, etc. También que siempre me reta a aprender cosas nuevas🐱, como en este curso que es donde logré aprender un poco de programación ( ˶°ㅁ°) !!
+    Lo que me gusta de mi carrera es que me permite explorar distintos lenguajes que conforman lo que conocemos de la comunicación₍^. .^₎Ⳋ: lo audiovisual, escrito, digital, etc. También que siempre me reta a aprender cosas nuevas🐱, como en este curso que es donde logré aprender un poco de programación ( ˶°ㅁ°) !!
     """
     col4.markdown(f"<div style='text-align: justify; font-size: 18px;'>{texto_2}</div>", unsafe_allow_html=True)
 
@@ -112,7 +112,7 @@ if pagina_seleccionada == 'Sobre mí':
     col6.image("harrypotter.jpg", width=350)
 
     texto = """
-    Algunos de mis pasatiempos:
+    Algunos de mis pasatiempos son:
     """
     
     st.markdown(f"<h4 style='text-align: center;'>{texto}</h4>", unsafe_allow_html=True) #con esto he podido hacer un subtitulo, PUEDO HACER MÁS SUBTITULOS CON ESTO AAA
@@ -245,23 +245,28 @@ else:
 
     # Mostramos el gráfico seleccionado
     if grafico_seleccionado == 'Gráfico de barras Tarjetas Rojas en La Liga':
-        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; '>🚩Promedio de Tarjetas Rojas en La Liga por equipo🚩</h3>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: justify; font-size: 18px;'>Este gráfico de barras lo hice en la tercera PC 𐔌՞ ܸ.ˬ.ܸ՞𐦯. Se trata de un gráfico de barras verticales en el que se muestre el cálculo del promedio de tarjetas rojas🚩 recibidas por cada equipo en La Liga como local, es decir, cuando el equipo jugó en su propio estadio o campo de juego ⚽. Primero se leyó el DataBase de La Liga, se calculó el promedio de las cartas rojas por equipo jugando como local y se creó el gráfico.</div>", unsafe_allow_html=True)
         st.image("LaLiga_promedio_tarjetas_rojas_equipo_local.png", caption='Promedio de tarjetas rojas en La Liga', width=500)
         pass
     elif grafico_seleccionado == 'Gráfico de Resultados de Celta como visitante':
-        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; '>⚽Resultados de partidos de Celta como visitante⚽</h3>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: justify; font-size: 18px;'>Este gráfico de pastel lo hice en la tercera PC ⚽. Se trata de un gráfico de pastel en el que se recopilan los datos de un equipo: la cantidad de partidos ganados, perdidos y empatados como visitantes 🏆, es decir, que compiten en el campo de juego del equipo contrario 🏅. En este caso, al equipo que elegí fue Celta 🏃. Primero se leyó el DataBase de La Liga, se filtró por los partidos de Celta como visitante y se creó el gráfico.</div>", unsafe_allow_html=True)
         st.image("pastel_celta_visitante.png", caption='Resultados partidos Celta como visitante', width=500)
         pass
     elif grafico_seleccionado == 'Gráfico de Resultados de Celta como local':
-        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; '>⚽Resultados de partidos de Celta como local⚽</h3>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: justify; font-size: 18px;'>Este gráfico de pastel lo hice en la tercera PC. Se trata de un gráfico de pastel en el que se recopilan los datos de un equipo: la cantidad de partidos ganados, perdidos y empatados como local 🏆, es decir, de cuando el equipo jugó en su propio estadio o campo de juego 🏅. En este caso, al equipo que elegí fue Celta 🏃. Primero se leyó el DataBase de La Liga, se filtró por los partidos de Celta como local y se creó el gráfico.</div>", unsafe_allow_html=True)
         st.image("pastel_celta_local.png", caption='Resultados partidos Celta como local', width=500)
         pass
     elif grafico_seleccionado == 'WordCloud Paro':
-        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; '>📢WordCloud sobre discurso Paro📢</h3>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: justify; font-size: 18px;'>Este WordCloud lo hicimos en la segunda PC. Se trata de una nube de palabras sobre un discurso de la actitud de la Ex-Presidenta Dina Boluarte frente a los paros de transportistas 🚌, sobre los casos de extorsión y su tacto ante el peligro al que se enfrentan los conductores de transporte público ⚠️. Se hizo una lista del texto y se creó una nube de palabras, en las que las palabras que se repiten con más frecuencia aparecen de mayor tamaño que las otras ˙⟡.</div>", unsafe_allow_html=True)
         st.image("wordcloud_paro.png", caption='WordCloud sobre el texto del Paro', width=500)
         pass
     elif grafico_seleccionado == 'Mapa Películas':
-        st.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu mapa</div>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; '>🎥Mapa interactivo sobre Top 5 películas🎥</h3>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: justify; font-size: 18px;'>Este mapa interactivo lo hice en la tercera PC👀. Se trata de un mapa interactivo donde se ubica donde se grabó cada película de un diccionario que hicimos de nuestras cinco películas favoritas 𐔌՞ ܸ.ˬ.ܸ՞𐦯, donde también se mostrara más información sobre ellas 🎥. Primero se hizo el diccionario con las cinco películas y su información, después se creó el mapa interactivo tomando la latitud y longitud para ubicarlas.</div>", unsafe_allow_html=True)
         # Si "mapa_cusco.html" es un archivo HTML (no una imagen), debes mostrarlo con st.components.v1.html
         import streamlit.components.v1 as components
         with open("mapa_pelis.html", "r", encoding="utf-8") as f:
