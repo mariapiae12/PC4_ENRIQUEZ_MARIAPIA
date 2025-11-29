@@ -123,7 +123,7 @@ if pagina_seleccionada == 'Sobre mí':
     col7, col8, col9 = st.columns(3)
     col10, col11, col12 = st.columns(3)
 
-    col7.image("pelicula.jpg", caption='🍿Ver películas y series🎬', width=222)
+    col7.image("pelicula.JPG", caption='🍿Ver películas y series🎬', width=222)
     col8.image("libros.jpg", caption='Leer libros📖✨', width=222)
     col9.image("colombia.jpg", caption='Viajar🛫🗺️', width=222)
     col10.image("concierto.jpg", caption='Salir con amigos°📸⋆｡', width=222)
